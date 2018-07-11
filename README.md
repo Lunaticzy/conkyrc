@@ -2,6 +2,7 @@
 
 
 
+
 额,,怎么说呢,,
 这份conky的配置文件,我是从网上找的,能够完美的运行在我的archlinux+gnome环境下
 
@@ -21,6 +22,9 @@
 之后请运行~/.Conky/startconky.sh就能看到效果,,,(PS:开机启动和手动启动绘制出的效果好像有点不一样,反正我这是这样的,我也不知道啥原因,)
 
 开机启动的话,,,用~/.config/autostart/conky.desktop的方法好像不行,,,,
+
+(PS:配合conky-manage使用给佳哟!,,,其实是因为有个字体装conky-manage的时候才有,就是大时间的那个字体,,)
+
 
 所以我是在~/.xporfile写入的sh ~/.Conky/startconky.sh
 
