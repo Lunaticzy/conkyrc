@@ -1,3 +1,7 @@
+<img src="https://raw.githubusercontent.com/9527tech/conkyrc/master/screenshot.png"/>
+
+
+
 额,,怎么说呢,,
 这份conky的配置文件,我是从网上找的,能够完美的运行在我的archlinux+gnome环境下
 
