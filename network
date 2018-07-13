@@ -47,7 +47,7 @@ uppercase no
 default_color FFFFFF
  
 TEXT
-${font WenQuanY Zen Hei:size=14}INTERNER${font}
+${font WenQuanY Zen Hei:size=14}NETWORK${font}
 ${font WenQuanY Zen Hei:size=12}${stippled_hr}${font}
 
 downspeed:$alignr${downspeed enp27s0}/s
