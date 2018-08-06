@@ -1,5 +1,6 @@
 #------------------------- Windows Settings
 # Create own window instead of using desktop (required in nautilus)
+background yes
 own_window yes
 own_window_type desktop
 own_window_transparent no
