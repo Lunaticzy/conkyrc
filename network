@@ -50,8 +50,8 @@ TEXT
 ${font WenQuanY Zen Hei:size=14}NETWORK${font}
 ${font WenQuanY Zen Hei:size=12}${stippled_hr}${font}
 
-downspeed:$alignr${downspeed enp27s0}/s
-upspeed:$alignr${upspeed enp27s0}/s
+Down:$alignr${downspeed enp27s0}/s
+Up:$alignr${upspeed enp27s0}/s
 ${downspeedgraph enp27s0 324D23 77B753}
 
 ${upspeedgraph enp27s0 324D23 77B753}

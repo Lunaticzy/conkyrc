@@ -51,7 +51,7 @@ ${font Santana:size=14}RAM ${alignr}$memperc%${font}
 ${font Santana:size=12}${stippled_hr}${font}
 
 Useage:${alignr}${mem}
-[+${buffers} +${cached}]
+B/C${alignr}${buffers}/${cached}
 
 ${top_mem name 1} ${alignr}${top_mem mem 1}
 ${top_mem name 2} ${alignr}${top_mem mem 2}
