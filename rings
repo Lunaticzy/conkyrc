@@ -53,7 +53,7 @@ lua_draw_hook_pre clock_rings
 TEXT
   ${font WenQuanY Zen Hei:size=12}  Root   ${fs_used /}/${fs_size /}                Home   ${fs_used /home}/${fs_size /home}$font
 ${voffset 105}${goto 123}${font WenQuanY Zen Hei:size=24}${time %H:%M}${voffset -10}${font WenQuanY Zen Hei:size=10}${font}
-${voffset -28}${goto 268}${hr 2}
+${voffset -28}${goto 290}${hr 2}
 ${voffset -70}${goto 300}${cpugraph 50,285 d5dcde ffffff} #${voffset -18} ${alignr} ${execi 60 ~/.Conky/gmailnotify.sh}
 ${voffset 40}${goto 285}${time %A, %d %B %Y}
 ${voffset 30}${goto 285}Kernel:  $kernel
