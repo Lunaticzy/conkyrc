@@ -1,7 +1,5 @@
 <img src="https://raw.githubusercontent.com/9527tech/conkyrc/master/screenshot.png"/>
 
-<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=29129889&auto=1&height=66"></iframe>
-
 
 额,,怎么说呢,,
 这份conky的配置文件,我是从网上找的,能够完美的运行在我的archlinux+gnome环境下
