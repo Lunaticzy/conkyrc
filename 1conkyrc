@@ -1,0 +1,82 @@
+background yes
+update_interval 1
+ 
+cpu_avg_samples 2
+net_avg_samples 2
+ 
+override_utf8_locale yes
+ 
+double_buffer yes
+no_buffers yes
+ 
+text_buffer_size 2048
+imlib_cache_size 0
+ 
+# -- Window specifications -- #
+ 
+own_window yes
+own_window_type desktop
+own_window_transparent yes
+own_window_argb_visual true
+own_window_hints undecorated
+ 
+border_inner_margin 0
+border_outer_margin 0
+ 
+minimum_size 240 5
+maximum_width 240
+ 
+alignment top_right
+gap_x 24
+gap_y 30
+ 
+# -- Graphics settings -- #
+draw_shades yes
+draw_outline no
+draw_borders no
+draw_graph_borders yes
+ 
+# -- Text settings -- #
+use_xft yes
+xftfont WenQuanYi Zen Hei:size=10
+xftalpha 0.8
+ 
+uppercase no
+ 
+default_color FFFFFF
+default_shade_color black
+default_outline_color DarkGrey
+
+
+
+TEXT
+${color #98c2c7}LOCALTIME:${color}     ${time  %a  %b %d}   ${time %k : %M}
+${color #98c2c7}UPTIME   :${color}     $uptime
+${color #98c2c7}DISK I/O :${color}     ${diskio}
+${color #78af78}${diskiograph 104E8B ffffff}
+# ${color #98c2c7}BATTERY  ${battery_percent C174}%     CPU FREQUENCY:${color} $freq_dyn_g
+# ${color #98c2c7}CPU TEMP:${color}${acpitemp}C  ${color #98c2c7}CPU USAGE:${color} $cpu%  ${color #98c2c7}
+${color #78af78}${cpugraph cpu0 000000 ffffff}
+${color #78af78}$cpubar
+${color #98c2c7}NAME               PID     CPU%   MEM%
+${color #e5e5e5}${top name 1} ${top pid 1} ${top cpu 1} ${top mem 1}
+${color #c4c4c4}${top name 2} ${top pid 2} ${top cpu 2} ${top mem 2}
+${color #a3a3a3}${top name 3} ${top pid 3} ${top cpu 3} ${top mem 3}
+${color #98c2c7}RAM:${color} $mem/$memmax - $memperc%
+${color #78af78}${membar 6}${color}
+${color #98c2c7}NAME               PID     CPU%   MEM%
+${color #e5e5e5}${top_mem name 1} ${top_mem pid 1} ${top_mem cpu 1} ${top_mem mem 1}
+${color #c4c4c4}${top_mem name 2} ${top_mem pid 2} ${top_mem cpu 2} ${top_mem mem 2}
+${color #a3a3a3}${top_mem name 3} ${top_mem pid 3} ${top_mem cpu 3} ${top_mem mem 3}
+${color #98c2c7}SWAP:${color} $swap/$swapmax - $swapperc%
+${color #78af78}${swapbar 6}$color
+${color #98c2c7}FILESYS:
+${color #98c2c7}/home$color  ${fs_used /home}/${fs_size /home}     FREE:${fs_free_perc /home}%
+${color #78af78}${fs_bar}$color
+
+${color #98c2c7}WIRE:${color #98c2c7}${offset 100}WIRELESS:
+${color #98c2c7}IP:${color}${addr enp27s0}${color #98c2c7}${offset 70}IP:${color}${addr enp27s0}
+${color #98c2c7}DOWN:${color} ${downspeed enp27s0} k/s${color #98c2c7}${offset 40}DOWN:${color} ${downspeed enp27s0} k/s
+${color #78af78}${downspeedgraph enp27s0 32,110 000000 ffffff}${color #78af78}${offset 20}${downspeedgraph enp27s0 32,110 000000 ffffff}
+${color #98c2c7}UP  :${color} ${upspeed enp27s0} k/s${color #98c2c7}${offset 20}UP  :${color} ${upspeed enp27s0} k/s
+${color #78af78}${upspeedgraph enp27s0 32,110 000000 ffffff}${color #78af78}${offset 20}${upspeedgraph enp27s0 32,110 000000 ffffff}
