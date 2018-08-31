@@ -1,6 +1,6 @@
 # -- Conky settings -- #
 background yes
-update_interval 3
+update_interval 1
  
 cpu_avg_samples 2
 net_avg_samples 2
@@ -17,19 +17,19 @@ imlib_cache_size 0
  
 own_window yes
 own_window_type desktop
-own_window_argb_visual true
 own_window_transparent yes
+own_window_argb_visual true
 own_window_hints undecorate,sticky,skip_taskbar,skip_pager,below
  
 border_inner_margin 0
 border_outer_margin 0
  
-minimum_size 160 100
+minimum_size 160 160
 maximum_width 160
  
 alignment tl
-gap_x 30
-gap_y 422
+gap_x 260
+gap_y 650
  
 # -- Graphics settings -- #
 draw_shades no
@@ -39,7 +39,7 @@ draw_graph_borders no
  
 # -- Text settings -- #
 use_xft yes
-xftfont Santana:size=10
+xftfont WenQuanY Zen Hei:size=10
 xftalpha 0.8
  
 uppercase no
@@ -47,17 +47,11 @@ uppercase no
 default_color FFFFFF
  
 TEXT
-${font Santana:size=14}RAM ${alignr}$memperc%${font}
-${font Santana:size=12}${stippled_hr}${font}
+${font WenQuanY Zen Hei:size=14}DISK${font}
+${font WenQuanY Zen Hei:size=12}${stippled_hr}${font}
 
-Useage:${alignr}${mem}
-Free:${alignr}${memfree}
-B/C:${alignr}${buffers}/${cached}
+Read:$alignr${diskio_read /dev/sdb}/s
+Write:$alignr${diskio_write /dev/sdb}/s
+${diskiograph_read /dev/sdb 324D23 77B753}
 
-${top_mem name 1} ${alignr}${top_mem mem 1}
-${top_mem name 2} ${alignr}${top_mem mem 2}
-${top_mem name 3} ${alignr}${top_mem mem 3}
-${top_mem name 4} ${alignr}${top_mem mem 4}
-${top_mem name 5} ${alignr}${top_mem mem 5}
-
-
+${diskiograph_write /dev/sdb 324D23 77B753}
