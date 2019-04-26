@@ -24,11 +24,11 @@ border_inner_margin 0
 border_outer_margin 0
  
 minimum_size 920 300
-maximum_width 1024
+maximum_width 648
  
 alignment tl
-gap_x 0
-gap_y 79
+gap_x 1215 
+gap_y 50
 own_window_argb_visual true
  
 # -- Graphics settings -- #
@@ -39,7 +39,7 @@ draw_graph_borders no
  
 # -- Text settings -- #
 use_xft yes
-xftfont WenQuanYi Zen Hei:size=18
+xftfont WenQuanYi Zen Hei:size=20
 xftalpha 0.8
  
 uppercase no
@@ -47,15 +47,17 @@ uppercase no
 default_color FFFFFF
  
 # -- Lua Load -- #
-lua_load ~/.Conky/clock_rings.lua
+lua_load ~/GitHub/conkyrc/clock_rings.lua
 lua_draw_hook_pre clock_rings
  
 TEXT
-  ${font WenQuanY Zen Hei:size=12}  Root   ${fs_used /}/${fs_size /}                Home   ${fs_used /home}/${fs_size /home}$font
-${voffset 105}${goto 123}${font WenQuanY Zen Hei:size=24}${time %H:%M}${voffset -10}${font WenQuanY Zen Hei:size=10}${font}
-${voffset -50}${goto 268}${hr 2}
-${voffset -75}${goto 275}${cpugraph 50,288 d5dcde ffffff} #${voffset -18} ${alignr} ${execi 60 ~/.Conky/gmailnotify.sh}
+#${font WenQuanY Zen Hei:size=12}${goto 278}  Root   ${fs_used /}/${fs_size /}              Home   ${fs_used /home}/${fs_size /home}$font
+#${voffset 105}${goto 123}${font WenQuanY Zen Hei:size=24}${time %H:%M}${voffset -10}${font WenQuanY Zen Hei:size=10}${font}
+#${voffset -50}${goto 268}${hr 2}
+#${voffset -75}${goto 275}${cpugraph 50,288 d5dcde ffffff} ${voffset -18} ${alignr} ${execi 60 ~/.Conky/gmailnotify.sh}
 ${voffset 40}${goto 285}${time %A, %d %B %Y}
 ${voffset 30}${goto 285}Kernel:  $kernel
+${font WenQuanY Zen Hei:size=12}${voffset 30}${goto 275}  Root   ${fs_used /}/${fs_size /}$font
+${font WenQuanY Zen Hei:size=12}${voffset 20}${goto 275}  Home   ${fs_used /home}/${fs_size /home}$font
 
 #${font WenQuanY Zen Hei:size=14}$WenQuanYi Zen Hei{voffset -120}${goto 300}BATTERY     ${battery BAT0}

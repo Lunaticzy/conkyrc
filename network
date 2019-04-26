@@ -28,8 +28,8 @@ minimum_size 160 160
 maximum_width 160
  
 alignment tl
-gap_x 30
-gap_y 650
+gap_x 1500
+gap_y 750
  
 # -- Graphics settings -- #
 draw_shades no
@@ -50,8 +50,8 @@ TEXT
 ${font WenQuanY Zen Hei:size=14}NETWORK${font}
 ${font WenQuanY Zen Hei:size=12}${stippled_hr}${font}
 
-Down:$alignr${downspeed enp27s0}/s
-Up:$alignr${upspeed enp27s0}/s
-${downspeedgraph enp27s0 324D23 77B753}
+Down:$alignr${downspeed wlp110s0}/s
+Up:$alignr${upspeed wlp110s0}/s
+${downspeedgraph wlp110s0 324D23 77B753}
 
-${upspeedgraph enp27s0 324D23 77B753}
+${upspeedgraph wlp110s0 324D23 77B753}

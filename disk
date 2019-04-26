@@ -28,8 +28,8 @@ minimum_size 160 160
 maximum_width 160
  
 alignment tl
-gap_x 260
-gap_y 650
+gap_x 1720
+gap_y 750
  
 # -- Graphics settings -- #
 draw_shades no
@@ -50,8 +50,8 @@ TEXT
 ${font WenQuanY Zen Hei:size=14}DISK${font}
 ${font WenQuanY Zen Hei:size=12}${stippled_hr}${font}
 
-Read:$alignr${diskio_read /dev/sdb}/s
-Write:$alignr${diskio_write /dev/sdb}/s
-${diskiograph_read /dev/sdb 324D23 77B753}
+Read:$alignr${diskio_read /dev/nvme0n1}/s
+Write:$alignr${diskio_write /dev/nvme0n1}/s
+${diskiograph_read /dev/nvme0n1 324D23 77B753}
 
-${diskiograph_write /dev/sdb 324D23 77B753}
+${diskiograph_write /dev/nvme0n1 324D23 77B753}
