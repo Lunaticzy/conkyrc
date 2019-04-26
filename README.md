@@ -1,8 +1,6 @@
 <img src="https://raw.githubusercontent.com/9527tech/conkyrc/master/screenshot.png"/>
 
 
-
-
 额,,怎么说呢,,
 这份conky的配置文件,我是从网上找的,能够完美的运行在我的archlinux+gnome环境下
 
@@ -10,6 +8,14 @@
 因为我的机子是4c8t的cpu所以,,,希望你最好和我的一样,,,这样就应该不会有错,,,,(我这里有份2c4t或4c4t的文件,,,,哎嘿嘿,,要的q我就完事了,)
 (PS.现在在本项目的4t分支里有已经一份2c/4t或4c/4t的配置文件了)
 
+<<<<<<< HEAD
+=======
+
+
+本项目一共4个分支,非别为:master,4t;other_4t,other_8
+请根据你的实际情况切换...前两个,要是rings部件错位,就用后面两个
+
+>>>>>>> master
 
 然后的话,,以前有一个notes功能,,,用来todolist,对我来说没啥用,我就给关了,然后.加了个网络显示功能
 
