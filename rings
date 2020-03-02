@@ -1,56 +1,59 @@
-# -- Conky settings -- #
-background yes
-update_interval 1
- 
-cpu_avg_samples 2
-net_avg_samples 2
- 
-override_utf8_locale yes
- 
-double_buffer yes
-no_buffers yes
- 
-text_buffer_size 2048
-imlib_cache_size 0
- 
-# -- Window specifications -- #
- 
-own_window yes
-own_window_type desktop
-own_window_transparent yes
-own_window_hints undecorate,sticky,skip_taskbar,skip_pager,below
- 
-border_inner_margin 0
-border_outer_margin 0
- 
-minimum_size 920 300
-maximum_width 1024
- 
-alignment tl
-gap_x 0
-gap_y 79
-own_window_argb_visual true
- 
-# -- Graphics settings -- #
-draw_shades no
-draw_outline no
-draw_borders no
-draw_graph_borders no
- 
-# -- Text settings -- #
-use_xft yes
-xftfont WenQuanYi Zen Hei:size=18
-xftalpha 0.8
- 
-uppercase no
- 
-default_color FFFFFF
- 
-# -- Lua Load -- #
-lua_load ~/.Conky/clock_rings.lua
-lua_draw_hook_pre clock_rings
- 
-TEXT
+conky.config = {
+-- -- Conky settings -- #
+	background = true,
+	update_interval = 1,
+
+	cpu_avg_samples = 2,
+	net_avg_samples = 2,
+
+	override_utf8_locale = true,
+
+	double_buffer = true,
+	no_buffers = true,
+
+	text_buffer_size = 2048,
+	imlib_cache_size = 0,
+
+-- -- Window specifications -- #
+
+	own_window = true,
+	own_window_type = 'desktop',
+	own_window_transparent = true,
+	own_window_hints = 'undecorate,sticky,skip_taskbar,skip_pager,below',
+
+	border_inner_margin = 0,
+	border_outer_margin = 0,
+
+	minimum_width = 920, minimum_height = 300,
+	maximum_width = 1024,
+
+	alignment = 'top_left',
+	gap_x = 0,
+	gap_y = 79,
+	own_window_argb_visual = true,
+
+-- -- Graphics settings -- #
+	draw_shades = false,
+	draw_outline = false,
+	draw_borders = false,
+	draw_graph_borders = false,
+
+-- -- Text settings -- #
+	use_xft = true,
+	font = 'WenQuanYi Zen Hei:size=18',
+	xftalpha = 0.8,
+
+	uppercase = false,
+
+	default_color = '#FFFFFF',
+
+-- -- Lua Load -- #
+	lua_load = '~/.Conky/clock_rings.lua',
+	lua_draw_hook_pre = 'clock_rings',
+
+};
+
+conky.text = [[
   ${font WenQuanY Zen Hei:size=12}  Root   ${fs_used /}/${fs_size /}                Home   ${fs_used /home}/${fs_size /home}$font
 ${voffset 105}${goto 123}${font WenQuanY Zen Hei:size=24}${time %H:%M}${voffset -10}${font WenQuanY Zen Hei:size=10}${font}
 ${voffset -28}${goto 290}${hr 2}
@@ -59,3 +62,4 @@ ${voffset 40}${goto 285}${time %A, %d %B %Y}
 ${voffset 30}${goto 285}Kernel:  $kernel
 
 #${font WenQuanY Zen Hei:size=14}$WenQuanYi Zen Hei{voffset -120}${goto 300}BATTERY     ${battery BAT0}
+]];

@@ -1,52 +1,56 @@
-#------------------------- Windows Settings
-# Create own window instead of using desktop (required in nautilus)
-background yes
-own_window yes
-own_window_type desktop
-own_window_transparent no
-own_window_hints undecorated,sticky,below,skip_taskbar,skip_pager
-own_window_colour black
-own_window_class Conky
-own_window_title Simple Default Conky
-own_window_argb_visual yes
-own_window_argb_value 0
-double_buffer yes
+conky.config = {
+--------------------------- Windows Settings
+-- Create own window instead of using desktop (required in nautilus)
+	background = true,
+	own_window = true,
+	own_window_type = 'desktop',
+	own_window_transparent = false,
+	own_window_hints = 'undecorated,sticky,below,skip_taskbar,skip_pager',
+	own_window_colour = 'black',
+	own_window_class = 'Conky',
+	own_window_title = 'Simple Default Conky',
+	own_window_argb_visual = true,
+	own_window_argb_value = 0,
+	double_buffer = true,
 
-#------------------------- Location
-minimum_size 600 120
-maximum_width 820
-gap_x 1100
-gap_y 645
+--------------------------- Location
+	minimum_width = 600, minimum_height = 120,
+	maximum_width = 820,
+	gap_x = 1100,
+	gap_y = 645,
 
-#------------------------- FONT
-use_xft yes
-xftfont GE Inspira:bold:size=20
-xftalpha 0.1	# Alpha of Xft font. Must be a value at or between 1 and 0 ###
-override_utf8_locale yes
-draw_shades no
-default_shade_color black
-draw_outline no
-uppercase no
+--------------------------- FONT
+	use_xft = true,
+	font = 'GE Inspira:bold:size=20',
+	xftalpha = 0.1,-- Alpha of Xft font. Must be a value at or between 1 and 0 ###
+	override_utf8_locale = true,
+	draw_shades = false,
+	default_shade_color = 'black',
+	draw_outline = false,
+	uppercase = false,
 
-alignment top_left
+	alignment = 'top_left',
 
-#------------------------- Colors
-default_color DCDCDC 		#220 220 220	Gainsboro
-color0 1793d0			#Special Color
-color1 DDDDDD			#Shades of grey
-color2 AAAAAA
-color3 888888
+--------------------------- Colors
+	default_color = '#DCDCDC',--220 220 220	Gainsboro
+	color0 = '#1793d0',--Special Color
+	color1 = '#DDDDDD',--Shades of grey
+	color2 = '#AAAAAA',
+	color3 = '#888888',
 
-#------------------------- BORDERS
-draw_borders no
-draw_outline no
-stippled_borders 0
-border_inner_margin 0
-border_outer_margin 0
-border_width 0
+--------------------------- BORDERS
+	draw_borders = false,
+	draw_outline = false,
+	stippled_borders = 0,
+	border_inner_margin = 0,
+	border_outer_margin = 0,
+	border_width = 0,
 
-#------------------------- OTHER
-update_interval 1
+--------------------------- OTHER
+	update_interval = 1,
 
-TEXT
+};
+
+conky.text = [[
 ${color}${font GE Inspira:pixelsize=120}${time %H:%M:%S}${font}${voffset -70}${offset 10}${color0}${font GE Inspira:pixelsize=42}
+]];
